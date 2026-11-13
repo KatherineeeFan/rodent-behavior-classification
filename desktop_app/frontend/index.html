@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rat Behavior Recognition - Annotation Tool</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Rat Behavior Recognition · Annotation Tool</h1>
+    <div class="header-actions">
+      <button id="btn-import">Import Video</button>
+      <button id="btn-settings">Set Shared Folder</button>
+      <button id="btn-export">Export This Video</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="video-panel">
+      <video id="video-player" controls></video>
+      <div id="status" class="status">Click "Import Video" in the top right to get started</div>
+      <div id="progress-wrap" class="progress-wrap" style="display:none;">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+    </section>
+
+    <section class="timeline-panel">
+      <div class="legend" id="legend"></div>
+      <div id="timeline" class="timeline"></div>
+      <div id="segment-list" class="segment-list"></div>
+    </section>
+  </main>
+
+  <div id="edit-modal" class="modal hidden">
+    <div class="modal-box">
+      <h3>Correct the label for this segment</h3>
+      <p id="edit-range"></p>
+      <select id="edit-select"></select>
+      <div class="modal-actions">
+        <button id="edit-cancel">Cancel</button>
+        <button id="edit-confirm">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
